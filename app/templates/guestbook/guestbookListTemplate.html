@@ -1,0 +1,26 @@
+<% _.each(messages, function(message) { %>
+<!-- This isn't great sanitization and you will want something more secure for outputting untrusted data to the page -->
+
+<div class="row">
+
+     <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-2">  <%= message.get('title') %></div>
+          <div class="col-md-2"><%= message.get('length') %></div>
+          <div class="col-md-6"><%= message.get('desc') %></div>
+          <div class="col-md-2"><button class="btn btn-danger delete">delete</button></div>
+
+     </div>
+
+    <!--<script type="text/javascript">-->
+        <!--var i = 0;-->
+
+        <!--var img_url = 'img/movie_pic/' + $('img.movie_poster').next('p').html();-->
+
+        <!--$('img.movie_poster').attr('src', img_url);-->
+
+    <!--</script>-->
+</div>
+
+<hr>
+
+<% }); %>
